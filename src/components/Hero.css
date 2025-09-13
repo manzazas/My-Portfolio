@@ -36,6 +36,13 @@
   line-height: 1.6;
 }
 
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .cta-button {
   background: white;
   color: #1e40af;
@@ -48,11 +55,26 @@
   transition: all 0.3s ease;
   text-decoration: none;
   display: inline-block;
+  text-align: center;
+  min-width: 160px;
 }
 
 .cta-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.cta-button.secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: white;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
 }
 
 .hero-image {
@@ -137,6 +159,17 @@
     font-size: 1.1rem;
   }
   
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .cta-button {
+    width: 100%;
+    max-width: 280px;
+  }
+  
   .image-placeholder {
     width: 200px;
     height: 200px;
@@ -145,5 +178,16 @@
   .hero-image img {
     width: 200px;
     height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-buttons {
+    gap: 0.75rem;
+  }
+  
+  .cta-button {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
   }
 }

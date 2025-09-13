@@ -7,7 +7,10 @@ function Hero() {
         <div className="hero-content">
           <h2 className="hero-title">Welcome to My Portfolio</h2>
           <p className="hero-subtitle">Computer Science and Math Student at CUNY Baruch College</p>
-          <a href="#projects" className="cta-button">View My Work</a>
+          <div className="hero-buttons">
+            <a href="#projects" className="cta-button">View My Work</a>
+            <a href="/resume.pdf" download="Zachary Stybel Resume.pdf" className="cta-button secondary">Download Resume</a>
+          </div>
         </div>
         <div className="hero-image">
           <div className="image-placeholder">
