@@ -10,6 +10,12 @@ function Projects() {
       liveUrl: "https://crypto-palace-mauve.vercel.app/"
     },
     {
+      title: "RentMinder",
+      description: "A lightweight copilot for renters — parse your lease, spot red flags, and never miss a due date. Built with Flask and Gemini AI, featuring PDF parsing and automated reminders via Gmail and Google Calendar.",
+      githubUrl: "https://github.com/manzazas/RentMinder.git",
+      liveUrl: "https://devpost.com/software/rentminder"
+    },
+    {
       title: "Soccer Management Database", 
       description: "Fully normalized relational database in Microsoft Access for soccer operations management. Features 15+ optimized SQL queries for data analysis, structured forms for streamlined data entry, and comprehensive reporting capabilities for players, contracts, injuries, and transfers.",
       githubUrl: "https://github.com/manzazas/Soccer-Database.git"
@@ -19,13 +25,21 @@ function Projects() {
       description: "Multi-agent AI system with custom tools and parsers for educational workflows. Features Quiz, Summarizer, and Planner agents that convert lecture notes into interactive study materials, generating 10-20 multiple-choice questions in under 5 seconds and reducing manual prep time by 80%.",
       githubUrl: "https://github.com/manzazas/StudyPal.git",
       
+    }, {
+      title: "Kinective",
+      description: "A fitness assistant that uses YOLO pose estimation and computer vision to track your form, count reps, and provide real-time feedback through a live camera feed. It helps users exercise confidently and safely without needing a personal trainer.",
+      githubUrl: "https://github.com/DianaAleksieieva/Kinective.git",
+      liveUrl: "https://devpost.com/software/kinective"
     },
+
     {
       title: "Gym Website",
       description: "Website template for a gym, built with HTML, CSS, and JavaScript. Features a responsive design with a modern aesthetic and smooth hover interactions, along with a contact form and form submission functionality.",
       githubUrl: "https://github.com/manzazas/Metro-Fitness.git",
       liveUrl: "https://manzazas.github.io/Metro-Fitness/"
     }
+    
+   
   ]
 
   return (

@@ -1,5 +1,4 @@
 import './Hero.css'
-import profileImage from '../assets/profile.jpeg'
 function Hero() {
   return (
     <section id="hero" className="hero">
@@ -14,7 +13,8 @@ function Hero() {
         </div>
         <div className="hero-image">
           <div className="image-placeholder">
-            <img src={profileImage} alt="selfie" />
+            {/* profile image served from public/assets */}
+            <img src="/assets/profile.jpeg" alt="selfie" />
           </div>
         </div>
       </div>
