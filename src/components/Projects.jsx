@@ -4,6 +4,12 @@ import ProjectCard from './ProjectCard'
 function Projects() {
   const projects = [
     {
+      title: "Lemonaid",
+      description: "An Amazon product analysis tool that retrieves and processes listing data via the Rainforest API. Built with a React frontend and Node.js/Express backend, it features a MongoDB caching layer that stores frequent requests to cut data retrieval times from 5 seconds to under 500ms. The system is deployed on AWS using Lambda and S3, with a GitHub Actions pipeline that automates the entire infrastructure and deployment process.",
+      githubUrl: "https://github.com/manzazas/Lemonaid.git",
+      liveUrl: "https://d2c7lelrnuzuqf.cloudfront.net/"
+    },
+    {
       title: "Crypto Palace",
       description: "A cryptocurrency tracking application featuring real-time market data from CoinGecko API, interactive price charts with Google Charts, and multi-currency support. Built with React, Vite, and Firebase authentication, featuring responsive design with minimalist gradients and smooth hover interactions.",
       githubUrl: "https://github.com/manzazas/Crypto-Palace.git",
