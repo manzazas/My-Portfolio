@@ -4,17 +4,14 @@ function Skills() {
   const skillCategories = [
     {
       title: "Programming Languages",
-      icon: "💻",
       skills: ["Python", "JavaScript", "SQL", "C++", "Java", "HTML", "CSS", "Verilog"]
     },
     {
       title: "Frameworks & Libraries",
-      icon: "⚛️",
       skills: ["React.js", "Node.js", "Express.js", "Tailwind CSS", "Bootstrap", "jQuery"]
     },
     {
       title: "Developer Tools",
-      icon: "🛠️",
       skills: ["GitHub", "Git", "Docker", "Vercel", "Firebase", "Postman", "Pandas", "Google Agent Developer Kit"]
     }
   ]
@@ -27,7 +24,6 @@ function Skills() {
           {skillCategories.map((category, index) => (
             <div key={index} className="skill-category">
               <div className="category-header">
-                <span className="category-icon">{category.icon}</span>
                 <h3>{category.title}</h3>
               </div>
               <div className="skills-container">

@@ -24,7 +24,6 @@ function Certifications() {
           {certifications.map((cert, index) => (
             <div key={index} className="cert-card">
               <div className="cert-header">
-                <div className="cert-icon">🏆</div>
                 <div className="cert-info">
                   <h3>{cert.title}</h3>
                   <p className="cert-issuer">{cert.issuer}</p>
