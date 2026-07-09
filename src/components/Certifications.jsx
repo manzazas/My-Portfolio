@@ -17,12 +17,14 @@ function Certifications() {
   ]
 
   return (
-    <section id="certifications" className="certifications">
+    <section id="certifications" className="certifications fade-in">
       <div className="container">
-        <h2>Certifications</h2>
+        <span className="section-kicker">Certifications</span>
+        <h2 className="section-title">Courses and programs I completed.</h2>
+        <p className="section-summary">A few structured programs that helped me build better habits and fill in gaps beyond coursework.</p>
         <div className="certifications-grid">
           {certifications.map((cert, index) => (
-            <div key={index} className="cert-card">
+            <div key={index} className="cert-card fade-in">
               <div className="cert-header">
                 <div className="cert-info">
                   <h3>{cert.title}</h3>

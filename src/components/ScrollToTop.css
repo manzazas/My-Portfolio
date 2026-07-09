@@ -1,20 +1,19 @@
-/* Scroll to Top Button */
 .scroll-to-top {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, #1e40af, #3b82f6);
-  color: white;
-  border: none;
-  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  background: rgba(8, 17, 30, 0.82);
+  color: var(--text);
+  border: 1px solid rgba(126, 247, 199, 0.2);
+  border-radius: 999px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 20px rgba(30, 64, 175, 0.3);
-  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
   z-index: 1000;
   opacity: 0;
   animation: fadeInUp 0.3s ease forwards;
@@ -22,8 +21,8 @@
 
 .scroll-to-top:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(30, 64, 175, 0.4);
-  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  border-color: rgba(126, 247, 199, 0.34);
+  background: rgba(126, 247, 199, 0.08);
 }
 
 .scroll-to-top:active {
@@ -52,8 +51,8 @@
   .scroll-to-top {
     bottom: 1.5rem;
     right: 1.5rem;
-    width: 45px;
-    height: 45px;
+    width: 2.75rem;
+    height: 2.75rem;
   }
   
   .scroll-icon {
@@ -66,8 +65,8 @@
   .scroll-to-top {
     bottom: 1rem;
     right: 1rem;
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
   }
   
   .scroll-icon {

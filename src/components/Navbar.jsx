@@ -16,16 +16,17 @@ function Navbar() {
     <header className="header">
       <nav className="nav">
         <div className="nav-brand">
+          <span className="nav-eyebrow">Portfolio</span>
           <h1>Zachary Stybel</h1>
         </div>
         
-        <button className="mobile-menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
+        <button className="mobile-menu-toggle" onClick={toggleMenu} aria-label="Toggle menu" aria-expanded={isMenuOpen} aria-controls="primary-navigation" type="button">
           <span className={`hamburger ${isMenuOpen ? 'active' : ''}`}></span>
           <span className={`hamburger ${isMenuOpen ? 'active' : ''}`}></span>
           <span className={`hamburger ${isMenuOpen ? 'active' : ''}`}></span>
         </button>
 
-        <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+        <ul id="primary-navigation" className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
           <li><a href="#about" onClick={closeMenu}>About</a></li>
           <li><a href="#projects" onClick={closeMenu}>Projects</a></li>
           <li><a href="#skills" onClick={closeMenu}>Skills</a></li>

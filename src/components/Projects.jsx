@@ -49,9 +49,11 @@ function Projects() {
   ]
 
   return (
-    <section id="projects" className="projects">
+    <section id="projects" className="projects fade-in">
       <div className="container">
-        <h2>My Projects</h2>
+        <span className="section-kicker">Projects</span>
+        <h2 className="section-title">Projects I’ve worked on.</h2>
+        <p className="section-summary">A mix of class projects, hackathon builds, and tools I made to solve real problems or learn something new.</p>
         <div className="project-grid">
           {projects.map((project, index) => (
             <ProjectCard 

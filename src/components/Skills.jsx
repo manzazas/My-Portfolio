@@ -17,12 +17,14 @@ function Skills() {
   ]
 
   return (
-    <section id="skills" className="skills">
+    <section id="skills" className="skills fade-in">
       <div className="container">
-        <h2>Technical Skills</h2>
+        <span className="section-kicker">Skills</span>
+        <h2 className="section-title">Tools and languages I use often.</h2>
+        <p className="section-summary">This is the stack I reach for most when I am building, debugging, or trying something new.</p>
         <div className="skills-grid">
           {skillCategories.map((category, index) => (
-            <div key={index} className="skill-category">
+            <div key={index} className="skill-category fade-in">
               <div className="category-header">
                 <h3>{category.title}</h3>
               </div>

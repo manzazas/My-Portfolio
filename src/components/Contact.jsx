@@ -17,10 +17,11 @@ function Contact() {
   ]
 
   return (
-    <section id="contact" className="contact">
+    <section id="contact" className="contact fade-in">
       <div className="container">
-        <h2>Get In Touch</h2>
-        <p>Ready to work together? Let's connect!</p>
+        <span className="section-kicker">Contact</span>
+        <h2 className="section-title">Reach out if you want to talk.</h2>
+        <p className="section-summary">Email, LinkedIn, and GitHub are below if you want to get in touch or look through my work.</p>
         <div className="contact-links">
           {contactLinks.map((link, index) => (
             <a 

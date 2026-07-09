@@ -2,7 +2,7 @@ import './ProjectCard.css'
 
 function ProjectCard({ title, description, githubUrl, liveUrl }) {
   return (
-    <div className="project-card">
+    <div className="project-card fade-in">
       <h3>{title}</h3>
       <p>{description}</p>
       <div className="project-links">
