@@ -28,7 +28,7 @@ function Projects() {
     },
     {
       title: "AI Study Assistant",
-      description: "Multi-agent AI system with custom tools and parsers for educational workflows. Features Quiz, Summarizer, and Planner agents that convert lecture notes into interactive study materials, generating 10-20 multiple-choice questions in under 5 seconds and reducing manual prep time by 80%.",
+      description: "Multi-agent AI system with custom tools and parsers for educational workflows. Features Quiz, Summarizer, and Planner agents that convert lecture notes into interactive study materials, generating 10-20 multiple-choice questions in under 5 seconds",
       githubUrl: "https://github.com/manzazas/StudyPal.git",
       
     }, {
