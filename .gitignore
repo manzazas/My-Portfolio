@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local references and unused generated concepts
+resources/
+public/assets/tactical-*.png
+public/assets/freesound_community-lightsaber-ignition-6816.mp3
+docs/assets/tactical-*.png
+docs/assets/freesound_community-lightsaber-ignition-6816.mp3

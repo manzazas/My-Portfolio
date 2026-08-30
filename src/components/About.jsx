@@ -1,6 +1,7 @@
 import './About.css'
 
 function About() {
+  const baseUrl = import.meta.env.BASE_URL
   const interests = [
     ['Rainbow Six Siege', 'Strategy, Rage'],
     ['FIFA', 'Hatred, Anger'],
@@ -30,7 +31,7 @@ function About() {
 
         <aside className="about-visual" aria-label="Zachary's profile and lightsaber preference">
           <figure className="about-portrait">
-            <img src="/assets/profile.jpeg" alt="Zachary Stybel" />
+            <img src={`${baseUrl}assets/profile.jpeg`} alt="Zachary Stybel" />
           </figure>
 
           <div className="saber-readout">

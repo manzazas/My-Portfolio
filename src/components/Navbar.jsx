@@ -11,6 +11,7 @@ const playSound = (audioRef) => {
 }
 
 function Navbar() {
+  const baseUrl = import.meta.env.BASE_URL
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const openSoundRef = useRef(null)
   const closeSoundRef = useRef(null)
@@ -62,12 +63,12 @@ function Navbar() {
             <li><a href="#skills" onClick={closeMenu}>Skills</a></li>
             <li><a href="#certifications" onClick={closeMenu}>Certifications</a></li>
             <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
-            <li><a className="nav-resume" href="/resume.pdf" target="_blank" rel="noreferrer" onClick={closeMenu}>Resume &#8599;</a></li>
+            <li><a className="nav-resume" href={`${baseUrl}resume.pdf`} target="_blank" rel="noreferrer" onClick={closeMenu}>Resume &#8599;</a></li>
           </ul>
         </div>
 
-        <audio ref={openSoundRef} src="/audio/lightsaber-open.mp3" preload="none" />
-        <audio ref={closeSoundRef} src="/audio/lightsaber-close.mp3" preload="none" />
+        <audio ref={openSoundRef} src={`${baseUrl}audio/lightsaber-open.mp3`} preload="none" />
+        <audio ref={closeSoundRef} src={`${baseUrl}audio/lightsaber-close.mp3`} preload="none" />
       </nav>
     </header>
   )
