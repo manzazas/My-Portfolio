@@ -1,3 +1,4 @@
+import { useLayoutEffect, useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -10,21 +11,40 @@ import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
 
 function App() {
+  const [introComplete, setIntroComplete] = useState(false)
+
+  useLayoutEffect(() => {
+    if (introComplete) return undefined
+
+    const previousBodyOverflow = document.body.style.overflow
+    const previousHtmlOverflow = document.documentElement.style.overflow
+    document.body.style.overflow = 'hidden'
+    document.documentElement.style.overflow = 'hidden'
+
+    return () => {
+      document.body.style.overflow = previousBodyOverflow
+      document.documentElement.style.overflow = previousHtmlOverflow
+    }
+  }, [introComplete])
+
   return (
     <div className="portfolio">
-      <Navbar />
-      
-      <main className="main">
-        <Hero />
-        <About />
-        <Projects />
-        <Skills />
-        <Certifications />
-        <Contact />
-      </main>
-
-      <Footer />
-      <ScrollToTop />
+      {!introComplete ? (
+        <Hero onComplete={() => setIntroComplete(true)} />
+      ) : (
+        <>
+          <Navbar />
+          <main className="main">
+            <About />
+            <Projects />
+            <Skills />
+            <Certifications />
+            <Contact />
+          </main>
+          <Footer />
+          <ScrollToTop />
+        </>
+      )}
     </div>
   )
 }

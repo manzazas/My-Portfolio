@@ -19,8 +19,7 @@ function Contact() {
   return (
     <section id="contact" className="contact fade-in">
       <div className="container">
-        <span className="section-kicker">Contact</span>
-        <h2 className="section-title">Reach out if you want to talk.</h2>
+        <h2 className="section-title">You can <em>find</em> me on...</h2>
         <p className="section-summary">Email, LinkedIn, and GitHub are below if you want to get in touch or look through my work.</p>
         <div className="contact-links">
           {contactLinks.map((link, index) => (

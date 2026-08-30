@@ -1,43 +1,20 @@
 import './Hero.css'
 
-function Hero() {
-  const highlights = [
-    { label: 'Currently', value: 'SWE Intern at Bloomberg' },
-    { label: 'Focus', value: 'Backend + Full-Stack' },
-    { label: 'Base', value: 'New York City' }
-  ]
-
+function Hero({ onComplete }) {
   return (
-    <section id="hero" className="hero">
-      <div className="hero-container">
-        <div className="hero-content">
-          <p className="hero-badge">Computer Science and Math at Baruch College</p>
-          <p className="hero-eyebrow">SWE intern at Bloomberg</p>
-          <h2 className="hero-title">Zachary Stybel</h2>
-          <p className="hero-subtitle">I’m a junior studying Computer Science at Baruch College, graduating in 2027. This summer, I’m working on the data delivery team for fixed income pricing at Bloomberg.</p>
-          <div className="hero-buttons">
-            <a href="#projects" className="cta-button">View My Work</a>
-          </div>
-          <div className="hero-highlights">
-            {highlights.map((item) => (
-              <div key={item.label} className="highlight-card">
-                <span>{item.label}</span>
-                <strong>{item.value}</strong>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="hero-visual">
-          {/* <div className="hero-card">
-            <span className="hero-card-label">Current work</span>
-            <h3>Fixed Income Pricing</h3>
-            <p>I’m working on the data delivery team for fixed income at Bloomberg.</p>
-          </div> */}
-          <div className="hero-image">
-            <div className="image-placeholder">
-              <img src="/assets/profile.jpeg" alt="Zachary Stybel portrait" />
-            </div>
-          </div>
+    <section id="hero" className="crawl-hero" aria-label="About Zachary Stybel">
+      <button className="crawl-exit" type="button" onClick={onComplete}>
+        Enter site <span aria-hidden="true">&#8594;</span>
+      </button>
+      <div className="crawl-wrapper">
+        <div className="crawl-text" onAnimationEnd={onComplete}>
+          <h2>Zachary Stybel</h2>
+          <h3>Software Engineer / New York City</h3>
+          <p>I'm a senior studying Computer Science at CUNY Baruch College, graduating in 2027. I just wrapped up my internship at Bloomberg where I worked on Bloomberg’s award-winning evaluated pricing service, BVAL.</p>
+          <p>I mainly worked with Python and got hands on experience with docker for local devlopment, unit and integration testing, desgining distributed systems, and database/schema design.</p>
+          <p>I enjoy participating in hackathons and won prizes at Columbia and City College. Those events taught me how to turn ambitious ideas into useful products under pressure and work collaboratively.</p>
+          <p>Outside of work and school, you I usually play Rainbow Six Siege, watch football, go to the gym, or chefing up in the kitchen.</p>
+          <p>This portfolio is a record of the projects, tools, and experiences that have shaped the engineer I'm becoming and I hope Disney does not sue me.</p>
         </div>
       </div>
     </section>

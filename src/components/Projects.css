@@ -1,12 +1,1 @@
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 1.2rem;
-  margin-top: 1.75rem;
-}
-
-@media (max-width: 768px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-}
+/* Project layout styles live in App.css. */

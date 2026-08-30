@@ -1,37 +1,30 @@
-.contact-links {
-  display: flex;
-  justify-content: center;
-  gap: 0.85rem;
-  flex-wrap: wrap;
-  margin-top: 1.5rem;
+.contact {
+  position: relative;
+  background:
+    linear-gradient(rgba(5, 9, 15, 0.72), rgba(5, 9, 15, 0.84)),
+    url('/assets/jedi_counc.jpg') center / cover no-repeat;
 }
 
-.contact-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 9.5rem;
-  padding: 0.9rem 1.2rem;
-  border-radius: 999px;
-  border: 1px solid rgba(157, 178, 210, 0.16);
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--text);
-  font-weight: 700;
+.contact .container {
+  position: relative;
+  z-index: 1;
 }
 
-.contact-link:hover {
-  border-color: rgba(126, 247, 199, 0.34);
-  background: rgba(126, 247, 199, 0.08);
-  transform: translateY(-2px);
+.contact .section-title em {
+  color: var(--holo);
 }
 
-@media (max-width: 768px) {
-  .contact-links {
-    flex-direction: column;
-    align-items: stretch;
-  }
+.contact .contact-link {
+  background: rgba(5, 9, 15, 0.52);
+  backdrop-filter: blur(5px);
+}
 
-  .contact-link {
-    width: 100%;
+.contact .contact-link:hover {
+  background: var(--holo);
+}
+
+@media (max-width: 800px) {
+  .contact {
+    background-position: 56% center;
   }
 }

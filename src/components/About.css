@@ -1,21 +1,206 @@
-.about-layout {
+.about {
+  position: relative;
+  overflow: hidden;
+  color: #e8eee9;
+  background:
+    linear-gradient(90deg, rgba(3, 8, 6, 0.94) 0%, rgba(3, 8, 6, 0.84) 56%, rgba(3, 8, 6, 0.68) 100%),
+    url('/assets/tat_1.jpg') center / cover no-repeat;
+  border-bottom-color: rgba(107, 255, 141, 0.2);
+}
+
+.about .about-layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(290px, 0.72fr);
+  gap: clamp(3rem, 8vw, 7rem);
+  align-items: center;
+}
+
+.about .about-copy {
+  max-width: 46rem;
+  margin: 0;
+}
+
+.about .section-title em {
+  color: #6bff8d;
+}
+
+.about .section-title {
+  max-width: 12ch;
+  color: #edf5ef;
+}
+
+.about-copy > p {
+  max-width: 64ch;
+  margin-top: 1.15rem;
+  color: #aebbb2;
+  font-size: 1rem;
+}
+
+.about-copy .about-lede {
+  margin-top: 1.7rem;
+  color: #d6e1d8;
+  font-size: 1.1rem;
+}
+
+.about-interests {
+  margin-top: 2.5rem;
+  border-top: 1px solid rgba(107, 255, 141, 0.42);
+}
+
+.interests-heading,
+.interest-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.interests-heading {
+  padding: 0.75rem 0;
+  color: #6bff8d;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.interest-row {
+  padding: 0.85rem 0;
+  border-top: 1px solid rgba(149, 181, 158, 0.16);
+}
+
+.interest-row strong {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.interest-row small {
+  color: #849a8b;
+}
+
+.about-visual {
+  width: min(100%, 360px);
+  justify-self: end;
+}
+
+.about-portrait {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid rgba(107, 255, 141, 0.34);
+  clip-path: polygon(0 0, calc(100% - 28px) 0, 100% 28px, 100% 100%, 28px 100%, 0 calc(100% - 28px));
+}
+
+.about-portrait::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(2, 9, 4, 0.9), transparent 45%);
+  pointer-events: none;
+}
+
+.about-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.65) contrast(1.08);
+}
+
+.about-portrait figcaption {
+  position: absolute;
+  z-index: 1;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.about-portrait figcaption span,
+.about-portrait figcaption strong {
   display: block;
 }
 
-.about-copy {
-  max-width: 60rem;
-  margin: 0 auto;
+.about-portrait figcaption span {
+  margin-bottom: 0.25rem;
+  color: #6bff8d;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
 }
 
-.about-text {
-  color: var(--muted);
-  font-size: 1.05rem;
-  line-height: 1.8;
-  margin-top: 1.1rem;
+.about-portrait figcaption strong {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.45rem;
+  text-transform: uppercase;
 }
 
-@media (max-width: 768px) {
-  .about-copy {
-    margin: 0;
+.saber-readout {
+  margin-top: 1.35rem;
+}
+
+.saber-heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.55rem;
+  color: #819388;
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.saber-heading strong {
+  color: #6bff8d;
+}
+
+.simple-saber {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 14px;
+}
+
+.simple-saber i {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 66px;
+  height: 12px;
+  border: 1px solid #8d9990;
+  background: linear-gradient(90deg, #242a26 0 12%, #aeb9b1 12% 18%, #303833 18% 70%, #aeb9b1 70% 78%, #1b211d 78%);
+  box-shadow: inset 0 0 0 2px #111612;
+}
+
+.simple-saber b {
+  flex: 1;
+  height: 5px;
+  border-radius: 0 999px 999px 0;
+  background: #eaffee;
+  box-shadow: 0 0 5px #fff, 0 0 12px #6bff8d, 0 0 24px #31e55a;
+}
+
+@media (max-width: 800px) {
+  .about {
+    background-position: 58% center;
+  }
+
+  .about .about-layout {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .about-visual {
+    width: min(86%, 360px);
+    justify-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .interests-heading,
+  .interest-row {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 0.75rem;
   }
 }

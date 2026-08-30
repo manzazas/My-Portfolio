@@ -1,10 +1,1 @@
-.footer {
-  padding: 2rem 1.25rem 2.5rem;
-  text-align: center;
-  color: var(--faint);
-}
-
-.footer p {
-  margin: 0;
-  font-size: 0.92rem;
-}
+/* Footer styles live in App.css. */

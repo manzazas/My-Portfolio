@@ -4,29 +4,33 @@ function Skills() {
   const skillCategories = [
     {
       title: "Programming Languages",
+      saber: "green",
       skills: ["Python", "JavaScript", "SQL", "C++", "Java", "HTML", "CSS", "Verilog"]
     },
     {
       title: "Frameworks & Libraries",
+      saber: "blue",
       skills: ["React.js", "Node.js", "Express.js", "Tailwind CSS", "Bootstrap", "jQuery"]
     },
     {
       title: "Developer Tools",
-      skills: ["GitHub", "Git", "Docker", "Vercel", "Firebase", "Postman", "Pandas", "Google Agent Developer Kit"]
+      saber: "red",
+      skills: ["GitHub", "Git", "Docker", "Kubernetes", "Argo Workflows", "Vercel", "Firebase", "Postman", "Pandas", "Google Agent Developer Kit"]
     }
   ]
 
   return (
     <section id="skills" className="skills fade-in">
       <div className="container">
-        <span className="section-kicker">Skills</span>
-        <h2 className="section-title">Tools and languages I use often.</h2>
-        <p className="section-summary">This is the stack I reach for most when I am building, debugging, or trying something new.</p>
+        <h2 className="section-title">Skills</h2>
         <div className="skills-grid">
-          {skillCategories.map((category, index) => (
-            <div key={index} className="skill-category fade-in">
+          {skillCategories.map((category) => (
+            <div key={category.title} className="skill-category fade-in">
               <div className="category-header">
                 <h3>{category.title}</h3>
+                <div className={`skill-saber skill-saber-${category.saber}`} aria-hidden="true">
+                  <i></i><span></span>
+                </div>
               </div>
               <div className="skills-container">
                 {category.skills.map((skill, skillIndex) => (
