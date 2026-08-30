@@ -68,7 +68,7 @@ function Navbar() {
         </div>
 
         <audio ref={openSoundRef} src={`${baseUrl}audio/lightsaber-open.mp3`} preload="none" />
-        <audio ref={closeSoundRef} src={`${baseUrl}audio/lightsaber-close.mp3`} preload="none" />
+        <audio ref={closeSoundRef} src={`${baseUrl}audio/lightsaber-open.mp3`} preload="none" />
       </nav>
     </header>
   )

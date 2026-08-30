@@ -1,4 +1,3 @@
-Place the navigation sound effects in this folder with these exact names:
+The same sound is used for opening and closing the navigation.
 
 lightsaber-open.mp3
-lightsaber-close.mp3
