@@ -1,0 +1,92 @@
+/* No Preflight: preserve the intro's global defaults. Prefix utilities to avoid
+   collisions with legacy classes. All visual changes are scoped to main. */
+@layer theme, utilities;
+@import 'tailwindcss/theme.css' layer(theme) prefix(tw);
+@import 'tailwindcss/utilities.css' layer(utilities) prefix(tw);
+
+/* Unlayered so these rules can override the existing component styles. */
+.main-polished {
+  --red: #86efac;
+  --holo: #86efac;
+  --line: rgba(148, 163, 184, 0.18);
+  --muted: #a5b4b0;
+  @apply tw:bg-[#080e11] tw:text-slate-100;
+}
+
+.main-polished > section {
+  @apply tw:py-20 tw:sm:py-24 tw:lg:py-28;
+}
+
+.main-polished .section-title {
+  font-size: clamp(2rem, 4.4vw, 3.75rem);
+  @apply tw:leading-tight tw:tracking-tight;
+}
+
+.main-polished .section-summary {
+  @apply tw:text-lg tw:leading-relaxed;
+}
+
+.main-polished .about {
+  @apply tw:pt-28 tw:sm:pt-32;
+}
+
+.main-polished .about-copy > p {
+  @apply tw:leading-relaxed;
+}
+
+.main-polished .about-interests {
+  @apply tw:rounded-2xl tw:border tw:border-solid tw:border-emerald-200/15 tw:bg-black/20 tw:px-5 tw:pb-2 tw:pt-1;
+}
+
+.main-polished .about-portrait {
+  clip-path: none;
+  @apply tw:rounded-3xl tw:border-emerald-200/20 tw:shadow-2xl;
+}
+
+.main-polished .saber-readout {
+  @apply tw:rounded-xl tw:border tw:border-solid tw:border-emerald-200/15 tw:bg-black/30 tw:p-5;
+}
+
+.main-polished .project-grid,
+.main-polished .certifications-grid,
+.main-polished .skills-grid {
+  @apply tw:gap-5 tw:border-0 tw:bg-transparent;
+}
+
+.main-polished .project-card,
+.main-polished .cert-card,
+.main-polished .skill-category {
+  clip-path: none;
+  @apply tw:rounded-2xl tw:border tw:border-solid tw:border-slate-700/60 tw:bg-slate-900/60 tw:p-6 tw:sm:p-8;
+}
+
+.main-polished .project-card {
+  @apply tw:transition-colors tw:duration-200;
+}
+
+.main-polished .project-card:hover,
+.main-polished .project-card:focus-within {
+  @apply tw:border-emerald-300/40 tw:bg-slate-800/70;
+}
+
+.main-polished .project-card h3 {
+  @apply tw:text-3xl tw:normal-case tw:leading-tight;
+}
+
+.main-polished .project-card p {
+  @apply tw:text-base tw:leading-relaxed;
+}
+
+.main-polished .project-links {
+  @apply tw:flex-wrap tw:gap-3 tw:pt-6;
+}
+
+.main-polished .project-link,
+.main-polished .contact-link {
+  clip-path: none;
+  @apply tw:rounded-lg tw:border-emerald-200/20 tw:px-5 tw:py-3 tw:normal-case;
+}
+
+.main-polished .skill-tag {
+  @apply tw:rounded-full tw:border-slate-600/60 tw:bg-slate-800/60 tw:px-4 tw:py-2 tw:text-slate-200;
+}

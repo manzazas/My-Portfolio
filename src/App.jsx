@@ -9,6 +9,7 @@ import Certifications from './components/Certifications'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
+import './main-tailwind.css'
 
 function App() {
   const [introComplete, setIntroComplete] = useState(false)
@@ -34,7 +35,7 @@ function App() {
       ) : (
         <>
           <Navbar />
-          <main className="main">
+          <main className="main main-polished">
             <About />
             <Projects />
             <Skills />
