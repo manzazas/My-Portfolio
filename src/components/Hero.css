@@ -99,11 +99,25 @@
 
 @media (max-width: 768px) {
   .crawl-wrapper {
-    width: 82%;
+    width: 88%;
+    perspective: 900px;
   }
 
   .crawl-text {
-    font-size: 5vw;
+    align-self: flex-start;
+    font-size: clamp(20px, 5.5vw, 32px);
+    transform-origin: center top;
+    animation-name: crawl-scroll-mobile;
+  }
+
+  /* Keep the text closer on phones and travel by its actual content height. */
+  @keyframes crawl-scroll-mobile {
+    from {
+      transform: translateY(0) translateZ(0) rotateX(12deg);
+    }
+    to {
+      transform: translateY(calc(-100% - 50vh)) translateZ(-300px) rotateX(12deg);
+    }
   }
 }
 
